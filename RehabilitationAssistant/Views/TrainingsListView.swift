@@ -1,5 +1,5 @@
 //
-//  TrainingsView.swift
+//  TrainingsListView.swift
 //  RehabilitationAssistant
 //
 //  Created by Jakub Gwóźdź on 21/04/2020.
