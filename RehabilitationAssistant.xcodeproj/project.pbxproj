@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A4D0FECDB7C8E135C5FA76A /* Pods_RehabilitationAssistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1BE7A967A9C3717F65E3CEC /* Pods_RehabilitationAssistant.framework */; };
+		8C35DFE1245089F900C7F83C /* ExercisesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C35DFE0245089F900C7F83C /* ExercisesListView.swift */; };
+		8C35DFE324508A6300C7F83C /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C35DFE224508A6300C7F83C /* Exercise.swift */; };
+		8C427C8D244F27C800A61D51 /* TrainingsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C427C8C244F27C800A61D51 /* TrainingsListView.swift */; };
+		8C427C8F244F27DD00A61D51 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C427C8E244F27DD00A61D51 /* HistoryView.swift */; };
+		8C427C91244F2E2100A61D51 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C427C90244F2E2100A61D51 /* Training.swift */; };
+		8C427CA0244F9E3700A61D51 /* TrainingMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C427C9F244F9E3700A61D51 /* TrainingMenuView.swift */; };
 		8CF8A819244E3D3A004CB2C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF8A818244E3D3A004CB2C6 /* AppDelegate.swift */; };
 		8CF8A81B244E3D3A004CB2C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF8A81A244E3D3A004CB2C6 /* SceneDelegate.swift */; };
 		8CF8A81D244E3D3A004CB2C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF8A81C244E3D3A004CB2C6 /* ContentView.swift */; };
@@ -16,7 +23,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8CF8A815244E3D3A004CB2C6 /* RehabilitationAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RehabilitationAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		120039C90DB631C54B9A4654 /* Pods-RehabilitationAssistant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RehabilitationAssistant.release.xcconfig"; path = "Target Support Files/Pods-RehabilitationAssistant/Pods-RehabilitationAssistant.release.xcconfig"; sourceTree = "<group>"; };
+		7652E8DEC02657C85258082F /* Pods-RehabilitationAssistant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RehabilitationAssistant.debug.xcconfig"; path = "Target Support Files/Pods-RehabilitationAssistant/Pods-RehabilitationAssistant.debug.xcconfig"; sourceTree = "<group>"; };
+		8C35DFE0245089F900C7F83C /* ExercisesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesListView.swift; sourceTree = "<group>"; };
+		8C35DFE224508A6300C7F83C /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		8C427C8C244F27C800A61D51 /* TrainingsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsListView.swift; sourceTree = "<group>"; };
+		8C427C8E244F27DD00A61D51 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		8C427C90244F2E2100A61D51 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
+		8C427C9F244F9E3700A61D51 /* TrainingMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingMenuView.swift; sourceTree = "<group>"; };
+		8CF8A815244E3D3A004CB2C6 /* Rehabilitation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rehabilitation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CF8A818244E3D3A004CB2C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CF8A81A244E3D3A004CB2C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8CF8A81C244E3D3A004CB2C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -24,6 +39,7 @@
 		8CF8A821244E3D3F004CB2C6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8CF8A824244E3D3F004CB2C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CF8A826244E3D3F004CB2C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1BE7A967A9C3717F65E3CEC /* Pods_RehabilitationAssistant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RehabilitationAssistant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,24 +47,55 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A4D0FECDB7C8E135C5FA76A /* Pods_RehabilitationAssistant.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6150A6F761D5B6246FC30F0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1BE7A967A9C3717F65E3CEC /* Pods_RehabilitationAssistant.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C427C9D244F902F00A61D51 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8C427C8C244F27C800A61D51 /* TrainingsListView.swift */,
+				8C427C8E244F27DD00A61D51 /* HistoryView.swift */,
+				8C427C9F244F9E3700A61D51 /* TrainingMenuView.swift */,
+				8C35DFE0245089F900C7F83C /* ExercisesListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8C427C9E244F909700A61D51 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8C427C90244F2E2100A61D51 /* Training.swift */,
+				8C35DFE224508A6300C7F83C /* Exercise.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		8CF8A80C244E3D3A004CB2C6 = {
 			isa = PBXGroup;
 			children = (
 				8CF8A817244E3D3A004CB2C6 /* RehabilitationAssistant */,
 				8CF8A816244E3D3A004CB2C6 /* Products */,
+				D93A9E972BDA02679B55DD17 /* Pods */,
+				6150A6F761D5B6246FC30F0F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		8CF8A816244E3D3A004CB2C6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8CF8A815244E3D3A004CB2C6 /* RehabilitationAssistant.app */,
+				8CF8A815244E3D3A004CB2C6 /* Rehabilitation.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +103,8 @@
 		8CF8A817244E3D3A004CB2C6 /* RehabilitationAssistant */ = {
 			isa = PBXGroup;
 			children = (
+				8C427C9E244F909700A61D51 /* Models */,
+				8C427C9D244F902F00A61D51 /* Views */,
 				8CF8A818244E3D3A004CB2C6 /* AppDelegate.swift */,
 				8CF8A81A244E3D3A004CB2C6 /* SceneDelegate.swift */,
 				8CF8A81C244E3D3A004CB2C6 /* ContentView.swift */,
@@ -75,6 +124,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D93A9E972BDA02679B55DD17 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7652E8DEC02657C85258082F /* Pods-RehabilitationAssistant.debug.xcconfig */,
+				120039C90DB631C54B9A4654 /* Pods-RehabilitationAssistant.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,6 +140,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8CF8A829244E3D3F004CB2C6 /* Build configuration list for PBXNativeTarget "RehabilitationAssistant" */;
 			buildPhases = (
+				6E76812D78103096AEE99505 /* [CP] Check Pods Manifest.lock */,
 				8CF8A811244E3D3A004CB2C6 /* Sources */,
 				8CF8A812244E3D3A004CB2C6 /* Frameworks */,
 				8CF8A813244E3D3A004CB2C6 /* Resources */,
@@ -92,7 +151,7 @@
 			);
 			name = RehabilitationAssistant;
 			productName = RehabilitationAssistant;
-			productReference = 8CF8A815244E3D3A004CB2C6 /* RehabilitationAssistant.app */;
+			productReference = 8CF8A815244E3D3A004CB2C6 /* Rehabilitation.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -141,14 +200,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6E76812D78103096AEE99505 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RehabilitationAssistant-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8CF8A811244E3D3A004CB2C6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C427C8D244F27C800A61D51 /* TrainingsListView.swift in Sources */,
+				8C427C91244F2E2100A61D51 /* Training.swift in Sources */,
 				8CF8A819244E3D3A004CB2C6 /* AppDelegate.swift in Sources */,
+				8C427C8F244F27DD00A61D51 /* HistoryView.swift in Sources */,
+				8C35DFE1245089F900C7F83C /* ExercisesListView.swift in Sources */,
 				8CF8A81B244E3D3A004CB2C6 /* SceneDelegate.swift in Sources */,
+				8C427CA0244F9E3700A61D51 /* TrainingMenuView.swift in Sources */,
 				8CF8A81D244E3D3A004CB2C6 /* ContentView.swift in Sources */,
+				8C35DFE324508A6300C7F83C /* Exercise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +372,7 @@
 		};
 		8CF8A82A244E3D3F004CB2C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7652E8DEC02657C85258082F /* Pods-RehabilitationAssistant.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -294,7 +385,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = AGH.RehabilitationAssistant;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Rehabilitation;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,6 +393,7 @@
 		};
 		8CF8A82B244E3D3F004CB2C6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 120039C90DB631C54B9A4654 /* Pods-RehabilitationAssistant.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -314,7 +406,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = AGH.RehabilitationAssistant;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Rehabilitation;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -9,28 +9,25 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selection = 0
- 
+    @State var showedView = "Your trainings"
+//    @State var title: Text = $showedView ?
+    
     var body: some View {
-        TabView(selection: $selection){
-            Text("First View")
-                .font(.title)
-                .tabItem {
-                    VStack {
-                        Image("first")
-                        Text("First")
-                    }
+        NavigationView{
+            ZStack{
+                TabView(selection: $showedView) {
+                    TrainingsListView()
+                        .tabItem {
+                            Image("Trainings")
+                            Text("Trainings")
+                        }.tag("Your trainings")
+                    HistoryView()
+                        .tabItem {
+                            Image("History")
+                            Text("History")
+                    }.tag("Your history")
                 }
-                .tag(0)
-            Text("Second View")
-                .font(.title)
-                .tabItem {
-                    VStack {
-                        Image("second")
-                        Text("Second")
-                    }
-                }
-                .tag(1)
+            }.navigationBarTitle(Text(showedView))
         }
     }
 }
