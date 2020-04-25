@@ -12,12 +12,9 @@ struct TrainingsListView: View {
     var trainings: [Training] = testData
     
     var body: some View {
-//        NavigationView {
             List(trainings){ training in
                 TrainingCell(training: training)
             }
-//            .navigationBarTitle(Text("Your trainings"))
-//        }
     }
 }
 

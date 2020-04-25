@@ -10,27 +10,26 @@ import SwiftUI
 
 struct TrainingMenuView: View {
     let training: Training
-    
     @State var showingTraining = false
     
     var body: some View {
-        ZStack{
-            VStack(alignment: .center) {
-                Image(training.imageName)
-                    .resizable().aspectRatio(contentMode: .fill)
-                    .edgesIgnoringSafeArea(.top)
-                    .frame(height: 200)
-                StartButton(training: training, showingTraining: self.$showingTraining)
-                    .offset(y: -200)
-                    .padding(.bottom, -200)
-                ExercisesListView(training: training)
-                Spacer()
-            }
+        GeometryReader{ metrics in
             ZStack{
-                Spacer()
-            }.background(Color.yellow)
-                .edgesIgnoringSafeArea(.all)
-                .offset(y: self.showingTraining ? 0 : UIApplication.shared.keyWindow?.frame.height ?? 0)
+                VStack(alignment: .center) {
+                    Image(self.training.imageName)
+                        .resizable().aspectRatio(contentMode: .fill)
+                        .edgesIgnoringSafeArea(.top)
+                        .frame(height: metrics.size.height*0.3)
+                    StartButton(training: self.training, showingTraining: self.$showingTraining)
+                        .offset(y: -metrics.size.height*0.3)
+                        .padding(.bottom, -metrics.size.height*0.3)
+                    ExercisesListView(training: self.training)
+                    Spacer()
+                }.sheet(isPresented: self.$showingTraining){
+                    TrainingView(training: self.training,
+                                 showingTraining: self.$showingTraining)
+                }
+            }
         }
     }
 }
@@ -40,30 +39,30 @@ struct StartButton: View {
     @Binding var showingTraining: Bool
     
     var body: some View {
-            VStack(alignment: .center) {
-                Button(action: {
-                    withAnimation{
-                        self.showingTraining.toggle()
-                    }
-                }) {
-                    Text("Start")
-                        .padding(40)
-                        .background(Color("StartBtnClr"))
-                        .foregroundColor(Color.black)
-                        .clipShape(Circle())
-                        .overlay(
-                            Circle().stroke(Color.white, lineWidth: 4))
-                        .shadow(radius: 10)
-                        .font(.title)
-                    
-                }.padding(20)
-                
-                Text(training.name)
+        VStack(alignment: .center) {
+            Button(action: {
+                withAnimation{
+                    self.showingTraining.toggle()
+                }
+            }) {
+                Text("Start")
+                    .padding(40)
+                    .background(Color("StartBtnClr"))
+                    .foregroundColor(Color.black)
+                    .clipShape(Circle())
+                    .overlay(
+                        Circle().stroke(Color.white, lineWidth: 4))
+                    .shadow(radius: 10)
                     .font(.title)
-                    .foregroundColor(Color.white)
-                Text(training.description)
-                    .font(.subheadline).foregroundColor(Color.white)
-            }
+                
+            }.padding(20)
+            
+            Text(training.name)
+                .font(.title)
+                .foregroundColor(Color.white)
+            Text(training.description)
+                .font(.subheadline).foregroundColor(Color.white)
+        }
     }
 }
 
