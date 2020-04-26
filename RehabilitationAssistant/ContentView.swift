@@ -10,7 +10,6 @@ import SwiftUI
 
 struct ContentView: View {
     @State var showedView = "Your trainings"
-//    @State var title: Text = $showedView ?
     
     var body: some View {
         NavigationView{

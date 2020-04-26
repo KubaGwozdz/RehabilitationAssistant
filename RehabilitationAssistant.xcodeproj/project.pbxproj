@@ -65,7 +65,7 @@
 		8C427C8E244F27DD00A61D51 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		8C427C90244F2E2100A61D51 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
 		8C427C9F244F9E3700A61D51 /* TrainingMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingMenuView.swift; sourceTree = "<group>"; };
-		8CF8A815244E3D3A004CB2C6 /* Rehabilitation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rehabilitation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CF8A815244E3D3A004CB2C6 /* Physio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Physio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CF8A818244E3D3A004CB2C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CF8A81A244E3D3A004CB2C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8CF8A81C244E3D3A004CB2C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -182,7 +182,7 @@
 		8CF8A816244E3D3A004CB2C6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8CF8A815244E3D3A004CB2C6 /* Rehabilitation.app */,
+				8CF8A815244E3D3A004CB2C6 /* Physio.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -242,7 +242,7 @@
 			);
 			name = RehabilitationAssistant;
 			productName = RehabilitationAssistant;
-			productReference = 8CF8A815244E3D3A004CB2C6 /* Rehabilitation.app */;
+			productReference = 8CF8A815244E3D3A004CB2C6 /* Physio.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -493,7 +493,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = AGH.RehabilitationAssistant;
-				PRODUCT_NAME = Rehabilitation;
+				PRODUCT_NAME = Physio;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -514,7 +514,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = AGH.RehabilitationAssistant;
-				PRODUCT_NAME = Rehabilitation;
+				PRODUCT_NAME = Physio;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

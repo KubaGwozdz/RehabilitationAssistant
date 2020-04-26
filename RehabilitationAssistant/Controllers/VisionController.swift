@@ -51,12 +51,16 @@ class VisionController : UIViewController {
         setupAndBeginCapturingVideoFrames()
     }
     
-    func onCameraButtonTapped(_ sender: Any) {
+    func onCameraButtonTapped() {
         videoCapture.flipCamera { error in
             if let error = error {
                 print("Failed to flip camera with error \(error)")
             }
         }
+    }
+    
+    func stop(){
+        videoCapture.stopCapturing()
     }
     
 }

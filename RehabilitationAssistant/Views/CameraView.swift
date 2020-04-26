@@ -11,14 +11,14 @@ import SwiftUI
 import AVFoundation
 
 struct CameraView : UIViewControllerRepresentable {
+    let controller = VisionController()
     func makeUIViewController(context: UIViewControllerRepresentableContext<CameraView>) -> UIViewController {
-        let controller = VisionController()
+//        let controller = VisionController()
 
         return controller
     }
     
     func updateUIViewController(_ uiViewController: CameraView.UIViewControllerType, context: UIViewControllerRepresentableContext<CameraView>) {
-        
     }
 }
 

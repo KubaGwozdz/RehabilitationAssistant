@@ -11,30 +11,41 @@ import AVFoundation
 
 struct TrainingView: View {
     let training: Training
-    @Binding var showingTraining: Bool
-
-    let session = AVCaptureSession()
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    let cameraView: CameraView = CameraView()
+    
     
     var body: some View {
         VStack {
             HStack(){
+                Button(action: {
+                    self.cameraView.controller.onCameraButtonTapped()
+                    
+                }) {
+                    Image(systemName: "camera.rotate").foregroundColor(Color.gray)
+                }
                 Spacer()
                 Button(action:{
-                    self.showingTraining.toggle()
+                    self.mode.wrappedValue.dismiss()
                 }){
                     Image(systemName: "xmark").foregroundColor(Color.gray)
                 }
             }.padding(20)
             Text(self.training.name).offset(y: -45)
-            CameraView()
-//            Image(uiImage: PoseImageView)
+            self.cameraView
+        }.edgesIgnoringSafeArea(.bottom)
+            .navigationBarTitle("").navigationBarHidden(true)
+            .onAppear(){
+                self.cameraView.controller.viewDidLoad()
+            }
+            .onDisappear(){
+                self.cameraView.controller.stop()
         }
     }
 }
 
 struct TrainingView_Previews: PreviewProvider {
     static var previews: some View {
-        TrainingView(training: Training(name: "Knee Training", description: "Super hard", exercises: [Exercise(name: "Knee Hugs", description: "Hold your knee for one or two seconds and then switch sides")]),
-            showingTraining: .constant(true))
+        TrainingView(training: Training(name: "Knee Training", description: "Super hard", exercises: [Exercise(name: "Knee Hugs", description: "Hold your knee for one or two seconds and then switch sides")]))
     }
 }
