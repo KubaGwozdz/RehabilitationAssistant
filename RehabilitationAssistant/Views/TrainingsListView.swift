@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct TrainingsListView: View {    
-    var trainings: [Training] = testData
+    var trainings: [TrainingViewModel] = testData
     
     var body: some View {
             List(trainings){ training in
@@ -28,7 +28,7 @@ struct TrainingsListView_Previews: PreviewProvider {
 #endif
 
 struct TrainingCell: View {
-    let training: Training
+    let training: TrainingViewModel
     
     var body: some View {
         NavigationLink(destination: TrainingMenuView(training: training)){

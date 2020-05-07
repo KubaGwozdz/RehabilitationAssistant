@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct TrainingMenuView: View {
-    let training: Training
+    let training: TrainingViewModel
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
     
@@ -32,9 +32,8 @@ struct TrainingMenuView: View {
                             }
                         }.offset(y: -metrics.size.height*0.3).padding(.leading, -metrics.size.width*0.48)
                         VStack(){
-                            NavigationLink(destination: TrainingView(training: self.training)){
+                            NavigationLink(destination: TrainingViewManager(training: self.training)){
                                 StartButton()
-                                
                             }
                             Text(self.training.name)
                                 .font(.title)
@@ -58,7 +57,7 @@ struct StartButton: View {
         VStack(alignment: .center) {
             Text("Start")
                 .padding(40)
-                .background(Color("StartBtnClr"))
+                .background(Color("Bolt"))
                 .foregroundColor(Color.black)
                 .clipShape(Circle())
                 .overlay(
@@ -72,7 +71,8 @@ struct StartButton: View {
 
 struct TrainingMenuView_Previews: PreviewProvider {
     static var previews: some View {
-        TrainingMenuView(training: Training(name: "Knee Training", description: "Super hard", exercises: [Exercise(name: "Knee Hugs", description: "Hold your knee for one or two seconds and then switch sides")]))
+        TrainingMenuView(training: TrainingViewModel(training: Training(name: "Knee Training", description: "Super hard", exercises: [Exercise(name: "Knee Hugs", description: "Hold your knee for one or two seconds and then switch sides")]))
+        )
     }
 }
 

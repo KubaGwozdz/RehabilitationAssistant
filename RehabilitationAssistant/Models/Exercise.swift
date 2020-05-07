@@ -8,13 +8,10 @@
 
 import SwiftUI
 
-struct Exercise: Identifiable {
-    var id = UUID()
-    
+struct Exercise: Codable {
     var name: String
     var description: String
     var imageName: String { return name }
-    
 }
 
 

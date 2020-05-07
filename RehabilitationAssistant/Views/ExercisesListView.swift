@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ExercisesListView: View {
-    let training: Training
+    let training: TrainingViewModel
 
     var body: some View {
         List(training.exercises){ exercise in
@@ -20,7 +20,7 @@ struct ExercisesListView: View {
 
 
 struct ExerciseCell: View {
-    let exercise: Exercise
+    let exercise: ExerciseViewModel
     
     var body: some View {
             HStack(spacing: 50) {
