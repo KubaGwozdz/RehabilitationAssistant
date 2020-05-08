@@ -35,12 +35,16 @@ struct TrainingViewModel: Identifiable {
         return self.training.exercises.map{ExerciseViewModel(exercise: $0)}
     }
     
+    var exercisesNumber: Int {
+        return self.exercises.count
+    }
+    
 }
 
 #if DEBUG
 let testData = [
     TrainingViewModel(training:
-        Training(name: "Knee Training", description: "Super hard", exercises: [Exercise(name: "Knee Hugs", description: "Hold your knee for one or two seconds and then switch sides")])
+        Training(name: "Knee Training", description: "Super hard", exercises: [Exercise(name: "Knee Hugs", description: "Hold your knee for one or two seconds and then switch sides", reps:20)])
     )
 ]
 #endif
