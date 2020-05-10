@@ -20,6 +20,9 @@ class VisionController : UIViewController {
     
     private let poseNet = PoseNet()
     
+    private let smoother = PoseSmoother()
+    private let trainer = Trainer()
+    
     /// The frame the PoseNet model is currently making pose predictions from.
     private var currentFrame: CGImage?
     
@@ -63,6 +66,8 @@ class VisionController : UIViewController {
         videoCapture.stopCapturing()
     }
     
+    
+    
 }
 
 // MARK: - VideoCaptureDelegate
@@ -98,9 +103,11 @@ extension VisionController: PoseNetDelegate {
                                       configuration: poseBuilderConfiguration,
                                       inputImage: currentFrame)
 
-        let poses = [poseBuilder.pose]
-
-        previewImageView.show(poses: poses, on: currentFrame)
+        
+        let builderPoses = [poseBuilder.pose]
+        let pose = smoother.getCurrentPose(pose: builderPoses[0])
+                
+        previewImageView.show(poses: [pose], on: currentFrame)
         if !self.subviewAdded{
             view.layer.addSublayer(self.previewImageView.layer)
             previewImageView.frame = view.frame
