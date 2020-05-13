@@ -10,19 +10,30 @@ import SwiftUI
 
 struct TrainingView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    let cameraView: CameraView = CameraView()
     
-    @State var timeLabel:String = "00:00"
-    @State var timeCounter:Int = 0
+    @State private var timeLabel:String = "00:00"
+    @State private var timeCounter:Int = 0
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     let training: TrainingViewModel
     
+    var cameraView: CameraView? = nil
+    
     @State var activeExercise: ExerciseViewModel
-    @State var exerciseCounter = 0
+    @State private var exerciseCounter = 0
     
     @Binding var trainingFinished: Bool
     
+    init(training: TrainingViewModel, activeExercise: ExerciseViewModel, trainingFinished: Binding<Bool>, extra: Bool){
+        self.training = training
+        self._activeExercise = State(initialValue: activeExercise)
+        self._trainingFinished = trainingFinished
+    }
+    
+    init(training: TrainingViewModel, activeExercise: ExerciseViewModel, trainingFinished: Binding<Bool>){
+        self.init(training: training, activeExercise: activeExercise, trainingFinished: trainingFinished, extra: false)
+        self.cameraView = CameraView(exercise: self.$activeExercise)
+    }
     
     func countToTimeString(counter: Int) -> String {
         let seconds = counter % 60
@@ -60,7 +71,7 @@ struct TrainingView: View {
                     Text(self.training.name)
                     Spacer()
                     Button(action: {
-                        self.cameraView.controller.onCameraButtonTapped()
+                        self.cameraView!.controller.onCameraButtonTapped()
                         
                     }) {
                         Image(systemName: "camera.rotate").foregroundColor(Color.gray)
@@ -69,7 +80,9 @@ struct TrainingView: View {
                 ZStack{
                     self.cameraView
                     TrainingAssistant(metrics: metrics, time: self.timeLabel,
-                                      training: self.training, activeExercise: self.$activeExercise, exerciseCounter: self.$exerciseCounter, trainingFinished: self.$trainingFinished)
+                                      training: self.training,
+                                      cameraView: self.cameraView!,
+                                      activeExercise: self.$activeExercise, exerciseCounter: self.$exerciseCounter, trainingFinished: self.$trainingFinished)
                         .frame(width:metrics.size.width*0.95, height: metrics.size.height*0.3)
                         .background(Color("Bolt").opacity(0.5))
                         .cornerRadius(20)
@@ -78,10 +91,10 @@ struct TrainingView: View {
             }.edgesIgnoringSafeArea(.bottom)
                 .navigationBarTitle("").navigationBarHidden(true)
                 .onAppear(){
-                    self.cameraView.controller.viewDidLoad()
+                    self.cameraView!.controller.viewDidLoad()
             }
             .onDisappear(){
-                self.cameraView.controller.stop()
+                self.cameraView!.controller.stop()
                 self.timer.upstream.connect().cancel()
             }
         }.onReceive(timer){time in
@@ -92,16 +105,21 @@ struct TrainingView: View {
 }
 
 
-
+// MARK: TrainingAssistant: View
 struct TrainingAssistant: View {
+    var doneRepsChanged = NotificationCenter.default.publisher(for: .doneReps)
+
     let metrics: GeometryProxy
     var time: String
     
     let training: TrainingViewModel
     
+    let cameraView: CameraView
+    
     @Binding var activeExercise: ExerciseViewModel
     @Binding var exerciseCounter: Int
     @Binding var trainingFinished: Bool
+    @State var doneReps = 0
     
     private var nextExerciseName: String {
         if self.exerciseCounter < self.training.exercisesNumber - 1{
@@ -114,8 +132,10 @@ struct TrainingAssistant: View {
     
     func nextExercise(){
         self.exerciseCounter += 1
+        self.doneReps = 0
         if self.exerciseCounter < self.training.exercisesNumber{
             self.activeExercise = self.training.exercises[self.exerciseCounter]
+            cameraView.changeExercise(self.activeExercise)
         } else {
             self.trainingFinished = true
         }
@@ -125,6 +145,7 @@ struct TrainingAssistant: View {
         if self.exerciseCounter > 0{
             self.exerciseCounter -= 1
             self.activeExercise = self.training.exercises[self.exerciseCounter]
+            cameraView.changeExercise(self.activeExercise)
         }
     }
     
@@ -141,9 +162,9 @@ struct TrainingAssistant: View {
                 Text(activeExercise.name)
                     .font(.custom("", size:26))
                 HStack(alignment: .center){
-                    Text("\(activeExercise.doneReps)").font(.headline)
+                    Text("\(doneReps)").font(.headline)
                     Text("/ \(activeExercise.reps) reps").font(.subheadline)
-                }.padding(5)
+                }.padding(.bottom, 5).padding(.top, 5)
                 HStack(alignment: .center){
                     VStack(alignment: .center){
                         Text("Accuracy:")
@@ -168,12 +189,17 @@ struct TrainingAssistant: View {
                     .frame(width: metrics.size.width*0.05, height: metrics.size.height*0.15)
                     .foregroundColor(Color.gray.opacity(0.5))
             }
+        }.onReceive(doneRepsChanged){note in
+            self.doneReps = note.userInfo!["doneReps"]! as! Int
+            if self.doneReps >= self.activeExercise.reps {
+                self.nextExercise()
+            }
         }
-//        .animation(.default)
-
     }
 }
 
+
+// MARK: Preview
 struct TrainingView_Previews: PreviewProvider {
     static var previews: some View {
         TrainingView(training: TrainingViewModel(training: Training(name: "Knee Training", description: "Super hard", exercises: [

@@ -15,12 +15,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" id="HDh-QF-tER">
-                                <rect key="frame" x="86.146634471650032" y="385.04662213136606" width="240.00000000000011" height="127.99999999999983"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="dXk-ae-RJ0">
+                                <rect key="frame" x="140.5" y="381.5" width="133" height="133"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dXk-ae-RJ0" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Cnf-Vz-F4w"/>
+                            <constraint firstItem="dXk-ae-RJ0" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="vOu-tB-t8O"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>

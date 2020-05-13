@@ -44,7 +44,10 @@ struct TrainingViewModel: Identifiable {
 #if DEBUG
 let testData = [
     TrainingViewModel(training:
-        Training(name: "Knee Training", description: "Super hard", exercises: [Exercise(name: "Knee Hugs", description: "Hold your knee for one or two seconds and then switch sides", reps:20)])
+        Training(name: "Knee Training", description: "Super hard", exercises: [
+            Exercise(name: "Knee Hugs", description: "Hold your knee for one or two seconds and then switch sides", reps:20),
+            Exercise(name: "Shoulder Taps", description: "Stand in the high plank position and tap your sholders", reps:10)
+        ])
     )
 ]
 #endif

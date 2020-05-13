@@ -36,6 +36,17 @@
 		8C427CA0244F9E3700A61D51 /* TrainingMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C427C9F244F9E3700A61D51 /* TrainingMenuView.swift */; };
 		8CA2FD66246825EA00AA8F89 /* ExerciseEstimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA2FD65246825EA00AA8F89 /* ExerciseEstimator.swift */; };
 		8CA2FD6824682D7E00AA8F89 /* HeadRelatedPose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA2FD6724682D7E00AA8F89 /* HeadRelatedPose.swift */; };
+		8C50928A246C33A0001ED642 /* PoseNetMobileNet100S16FP16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8C509289246C33A0001ED642 /* PoseNetMobileNet100S16FP16.mlmodel */; };
+		8CA2FD5C246823CA00AA8F89 /* PoseCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA2FD54246823CA00AA8F89 /* PoseCD+CoreDataClass.swift */; };
+		8CA2FD5D246823CA00AA8F89 /* PoseCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA2FD55246823CA00AA8F89 /* PoseCD+CoreDataProperties.swift */; };
+		8CA2FD5E246823CA00AA8F89 /* PositionCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA2FD56246823CA00AA8F89 /* PositionCD+CoreDataClass.swift */; };
+		8CA2FD5F246823CA00AA8F89 /* PositionCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA2FD57246823CA00AA8F89 /* PositionCD+CoreDataProperties.swift */; };
+		8CA2FD60246823CA00AA8F89 /* TrainingCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA2FD58246823CA00AA8F89 /* TrainingCD+CoreDataClass.swift */; };
+		8CA2FD61246823CA00AA8F89 /* TrainingCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA2FD59246823CA00AA8F89 /* TrainingCD+CoreDataProperties.swift */; };
+		8CA2FD62246823CA00AA8F89 /* ExerciseCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA2FD5A246823CA00AA8F89 /* ExerciseCD+CoreDataClass.swift */; };
+		8CA2FD63246823CA00AA8F89 /* ExerciseCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA2FD5B246823CA00AA8F89 /* ExerciseCD+CoreDataProperties.swift */; };
+		8CA2FD66246825EA00AA8F89 /* Trainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA2FD65246825EA00AA8F89 /* Trainer.swift */; };
+		8CA2FD6824682D7E00AA8F89 /* SimplePose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA2FD6724682D7E00AA8F89 /* SimplePose.swift */; };
 		8CC8AA4A2462D7EB00D07D25 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC8AA492462D7EB00D07D25 /* CountdownView.swift */; };
 		8CC8AA4C2462EE9600D07D25 /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC8AA4B2462EE9600D07D25 /* TrainingView.swift */; };
 		8CC8AA4E2462FEFF00D07D25 /* TrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC8AA4D2462FEFF00D07D25 /* TrainingViewModel.swift */; };
@@ -79,6 +90,17 @@
 		8C427C9F244F9E3700A61D51 /* TrainingMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingMenuView.swift; sourceTree = "<group>"; };
 		8CA2FD65246825EA00AA8F89 /* ExerciseEstimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseEstimator.swift; sourceTree = "<group>"; };
 		8CA2FD6724682D7E00AA8F89 /* HeadRelatedPose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadRelatedPose.swift; sourceTree = "<group>"; };
+		8C509289246C33A0001ED642 /* PoseNetMobileNet100S16FP16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PoseNetMobileNet100S16FP16.mlmodel; sourceTree = "<group>"; };
+		8CA2FD54246823CA00AA8F89 /* PoseCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PoseCD+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8CA2FD55246823CA00AA8F89 /* PoseCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PoseCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8CA2FD56246823CA00AA8F89 /* PositionCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PositionCD+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8CA2FD57246823CA00AA8F89 /* PositionCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PositionCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8CA2FD58246823CA00AA8F89 /* TrainingCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrainingCD+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8CA2FD59246823CA00AA8F89 /* TrainingCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrainingCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8CA2FD5A246823CA00AA8F89 /* ExerciseCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExerciseCD+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8CA2FD5B246823CA00AA8F89 /* ExerciseCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExerciseCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8CA2FD65246825EA00AA8F89 /* Trainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trainer.swift; sourceTree = "<group>"; };
+		8CA2FD6724682D7E00AA8F89 /* SimplePose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePose.swift; sourceTree = "<group>"; };
 		8CC8AA492462D7EB00D07D25 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 		8CC8AA4B2462EE9600D07D25 /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
 		8CC8AA4D2462FEFF00D07D25 /* TrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewModel.swift; sourceTree = "<group>"; };
@@ -137,7 +159,7 @@
 		8C35A00E24549AC4007DE5BC /* PoseNet */ = {
 			isa = PBXGroup;
 			children = (
-				8C359FFC24545DCD007DE5BC /* PoseNetMobileNet075S16FP16.mlmodel */,
+				8C50928B246C34FA001ED642 /* MLmodels */,
 				8C359FF624545CF5007DE5BC /* PoseNet.swift */,
 				8C359FF824545D2C007DE5BC /* PoseNetInput.swift */,
 				8C359FFA24545D35007DE5BC /* PoseNetOutput.swift */,
@@ -192,6 +214,15 @@
 				1C89EFB62469884700C9BE93 /* Head.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8C50928B246C34FA001ED642 /* MLmodels */ = {
+			isa = PBXGroup;
+			children = (
+				8C509289246C33A0001ED642 /* PoseNetMobileNet100S16FP16.mlmodel */,
+				8C359FFC24545DCD007DE5BC /* PoseNetMobileNet075S16FP16.mlmodel */,
+			);
+			path = MLmodels;
 			sourceTree = "<group>";
 		};
 		8CA037A72464375900B1ECE8 /* ViewModels */ = {
@@ -385,6 +416,9 @@
 				1C89EFB72469884700C9BE93 /* Head.swift in Sources */,
 				1C89EFB92469A20700C9BE93 /* ExerciseQualifier.swift in Sources */,
 				8C35DFF62453341A00C7F83C /* VisionController.swift in Sources */,
+				8CA2FD5D246823CA00AA8F89 /* PoseCD+CoreDataProperties.swift in Sources */,
+				8CA2FD63246823CA00AA8F89 /* ExerciseCD+CoreDataProperties.swift in Sources */,
+				8C50928A246C33A0001ED642 /* PoseNetMobileNet100S16FP16.mlmodel in Sources */,
 				8CF8A81D244E3D3A004CB2C6 /* ContentView.swift in Sources */,
 				8C35DFE324508A6300C7F83C /* Exercise.swift in Sources */,
 				8C359FFD24545DCD007DE5BC /* PoseNetMobileNet075S16FP16.mlmodel in Sources */,
