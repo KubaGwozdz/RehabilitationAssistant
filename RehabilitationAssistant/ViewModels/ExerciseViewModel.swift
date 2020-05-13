@@ -32,5 +32,4 @@ class ExerciseViewModel: Identifiable, ObservableObject{
     var reps: Int{
         return self.exercise.reps
     }
-    var doneReps: Int = 0
 }

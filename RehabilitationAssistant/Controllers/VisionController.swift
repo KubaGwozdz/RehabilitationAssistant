@@ -12,7 +12,23 @@ import AVFoundation
 import UIKit
 import VideoToolbox
 
+
+extension Notification.Name {
+  static var doneReps: Notification.Name { return .init("doneReps") }
+}
+
 class VisionController : UIViewController {
+    var doneReps: Int = 0{
+      didSet {
+        let userinfo: [String: Int] = ["doneReps": self.doneReps]
+        NotificationCenter.default.post(Notification(name: .doneReps,
+                                                     object: nil,
+                                                     userInfo: userinfo))
+      }
+    }
+    
+    weak var exercise: ExerciseViewModel?
+    
     private var previewImageView: PoseImageView = PoseImageView()
     private var subviewAdded: Bool = false
     
@@ -21,8 +37,9 @@ class VisionController : UIViewController {
     private let poseNet = PoseNet()
     
     private let smoother = PoseSmoother()
-    private let trainer = Trainer()
     
+    private let trainer = Trainer()
+            
     /// The frame the PoseNet model is currently making pose predictions from.
     private var currentFrame: CGImage?
     

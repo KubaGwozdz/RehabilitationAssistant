@@ -11,14 +11,21 @@ import SwiftUI
 import AVFoundation
 
 struct CameraView : UIViewControllerRepresentable {
+    @Binding var exercise: ExerciseViewModel
+    
     let controller = VisionController()
-    func makeUIViewController(context: UIViewControllerRepresentableContext<CameraView>) -> UIViewController {
-//        let controller = VisionController()
-
+    
+    func makeUIViewController(context: UIViewControllerRepresentableContext<CameraView>) -> VisionController {
+        controller.exercise = exercise
         return controller
     }
     
-    func updateUIViewController(_ uiViewController: CameraView.UIViewControllerType, context: UIViewControllerRepresentableContext<CameraView>) {
+    func updateUIViewController(_ uiViewController: VisionController, context: UIViewControllerRepresentableContext<CameraView>) {
+    }
+    
+    func changeExercise(_ exercise: ExerciseViewModel){
+        controller.exercise = exercise
+        controller.doneReps = 0
     }
 }
 
