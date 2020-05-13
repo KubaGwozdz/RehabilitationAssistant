@@ -27,7 +27,12 @@ class PoseNet {
     /// The Core ML model that the PoseNet model uses to generate estimates for the poses.
     ///
     /// - Note: Other variants of the PoseNet model are available from the Model Gallery.
-    private let poseNetMLModel = PoseNetMobileNet075S16FP16().model
+    //    default
+    //    private let poseNetMLModel = PoseNetMobileNet075S16FP16().model
+    //    bigger
+    private let poseNetMLModel = PoseNetMobileNet100S16FP16().model
+    
+    
     
     
     /// Calls the `prediction` method of the PoseNet model and returns the outputs to the assigned

@@ -33,6 +33,7 @@
 		8C427C8F244F27DD00A61D51 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C427C8E244F27DD00A61D51 /* HistoryView.swift */; };
 		8C427C91244F2E2100A61D51 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C427C90244F2E2100A61D51 /* Training.swift */; };
 		8C427CA0244F9E3700A61D51 /* TrainingMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C427C9F244F9E3700A61D51 /* TrainingMenuView.swift */; };
+		8C50928A246C33A0001ED642 /* PoseNetMobileNet100S16FP16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8C509289246C33A0001ED642 /* PoseNetMobileNet100S16FP16.mlmodel */; };
 		8CA2FD5C246823CA00AA8F89 /* PoseCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA2FD54246823CA00AA8F89 /* PoseCD+CoreDataClass.swift */; };
 		8CA2FD5D246823CA00AA8F89 /* PoseCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA2FD55246823CA00AA8F89 /* PoseCD+CoreDataProperties.swift */; };
 		8CA2FD5E246823CA00AA8F89 /* PositionCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA2FD56246823CA00AA8F89 /* PositionCD+CoreDataClass.swift */; };
@@ -83,6 +84,7 @@
 		8C427C8E244F27DD00A61D51 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		8C427C90244F2E2100A61D51 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
 		8C427C9F244F9E3700A61D51 /* TrainingMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingMenuView.swift; sourceTree = "<group>"; };
+		8C509289246C33A0001ED642 /* PoseNetMobileNet100S16FP16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PoseNetMobileNet100S16FP16.mlmodel; sourceTree = "<group>"; };
 		8CA2FD54246823CA00AA8F89 /* PoseCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PoseCD+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8CA2FD55246823CA00AA8F89 /* PoseCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PoseCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8CA2FD56246823CA00AA8F89 /* PositionCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PositionCD+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -151,7 +153,7 @@
 		8C35A00E24549AC4007DE5BC /* PoseNet */ = {
 			isa = PBXGroup;
 			children = (
-				8C359FFC24545DCD007DE5BC /* PoseNetMobileNet075S16FP16.mlmodel */,
+				8C50928B246C34FA001ED642 /* MLmodels */,
 				8C359FF624545CF5007DE5BC /* PoseNet.swift */,
 				8C359FF824545D2C007DE5BC /* PoseNetInput.swift */,
 				8C359FFA24545D35007DE5BC /* PoseNetOutput.swift */,
@@ -204,6 +206,15 @@
 				8CA2FD6724682D7E00AA8F89 /* SimplePose.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8C50928B246C34FA001ED642 /* MLmodels */ = {
+			isa = PBXGroup;
+			children = (
+				8C509289246C33A0001ED642 /* PoseNetMobileNet100S16FP16.mlmodel */,
+				8C359FFC24545DCD007DE5BC /* PoseNetMobileNet075S16FP16.mlmodel */,
+			);
+			path = MLmodels;
 			sourceTree = "<group>";
 		};
 		8CA037A72464375900B1ECE8 /* ViewModels */ = {
@@ -420,6 +431,7 @@
 				8C35DFF62453341A00C7F83C /* VisionController.swift in Sources */,
 				8CA2FD5D246823CA00AA8F89 /* PoseCD+CoreDataProperties.swift in Sources */,
 				8CA2FD63246823CA00AA8F89 /* ExerciseCD+CoreDataProperties.swift in Sources */,
+				8C50928A246C33A0001ED642 /* PoseNetMobileNet100S16FP16.mlmodel in Sources */,
 				8CF8A81D244E3D3A004CB2C6 /* ContentView.swift in Sources */,
 				8CA2FD5E246823CA00AA8F89 /* PositionCD+CoreDataClass.swift in Sources */,
 				8C35DFE324508A6300C7F83C /* Exercise.swift in Sources */,
