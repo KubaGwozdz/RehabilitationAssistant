@@ -21,7 +21,8 @@ class VisionController : UIViewController {
     private let poseNet = PoseNet()
     
     private let smoother = PoseSmoother()
-    private let trainer = Trainer()
+    
+    private let exerciseEstimator = ExerciseEstimator()
     
     /// The frame the PoseNet model is currently making pose predictions from.
     private var currentFrame: CGImage?
@@ -106,7 +107,12 @@ extension VisionController: PoseNetDelegate {
         
         let builderPoses = [poseBuilder.pose]
         let pose = smoother.getCurrentPose(pose: builderPoses[0])
-                
+        
+        exerciseEstimator.showPose(pose: pose)
+        
+        let headRelatedPose = exerciseEstimator.makeHeadRelatedPose(pose: pose)
+        exerciseEstimator.showHeadRelatedPose(headRelatedPose: headRelatedPose)
+        
         previewImageView.show(poses: [pose], on: currentFrame)
         if !self.subviewAdded{
             view.layer.addSublayer(self.previewImageView.layer)
