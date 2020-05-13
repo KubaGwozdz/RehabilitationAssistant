@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C89EFB72469884700C9BE93 /* Head.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C89EFB62469884700C9BE93 /* Head.swift */; };
+		1C89EFB92469A20700C9BE93 /* ExerciseQualifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C89EFB82469A20700C9BE93 /* ExerciseQualifier.swift */; };
 		6A4D0FECDB7C8E135C5FA76A /* Pods_RehabilitationAssistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1BE7A967A9C3717F65E3CEC /* Pods_RehabilitationAssistant.framework */; };
-		8C2A97342465B800008DFCE8 /* RehabilitationAssistantDM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C2A97322465B800008DFCE8 /* RehabilitationAssistantDM.xcdatamodeld */; };
 		8C359FF724545CF5007DE5BC /* PoseNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C359FF624545CF5007DE5BC /* PoseNet.swift */; };
 		8C359FF924545D2C007DE5BC /* PoseNetInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C359FF824545D2C007DE5BC /* PoseNetInput.swift */; };
 		8C359FFB24545D35007DE5BC /* PoseNetOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C359FFA24545D35007DE5BC /* PoseNetOutput.swift */; };
@@ -33,6 +34,8 @@
 		8C427C8F244F27DD00A61D51 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C427C8E244F27DD00A61D51 /* HistoryView.swift */; };
 		8C427C91244F2E2100A61D51 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C427C90244F2E2100A61D51 /* Training.swift */; };
 		8C427CA0244F9E3700A61D51 /* TrainingMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C427C9F244F9E3700A61D51 /* TrainingMenuView.swift */; };
+		8CA2FD66246825EA00AA8F89 /* ExerciseEstimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA2FD65246825EA00AA8F89 /* ExerciseEstimator.swift */; };
+		8CA2FD6824682D7E00AA8F89 /* HeadRelatedPose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA2FD6724682D7E00AA8F89 /* HeadRelatedPose.swift */; };
 		8C50928A246C33A0001ED642 /* PoseNetMobileNet100S16FP16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8C509289246C33A0001ED642 /* PoseNetMobileNet100S16FP16.mlmodel */; };
 		8CA2FD5C246823CA00AA8F89 /* PoseCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA2FD54246823CA00AA8F89 /* PoseCD+CoreDataClass.swift */; };
 		8CA2FD5D246823CA00AA8F89 /* PoseCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA2FD55246823CA00AA8F89 /* PoseCD+CoreDataProperties.swift */; };
@@ -58,8 +61,9 @@
 
 /* Begin PBXFileReference section */
 		120039C90DB631C54B9A4654 /* Pods-RehabilitationAssistant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RehabilitationAssistant.release.xcconfig"; path = "Target Support Files/Pods-RehabilitationAssistant/Pods-RehabilitationAssistant.release.xcconfig"; sourceTree = "<group>"; };
+		1C89EFB62469884700C9BE93 /* Head.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Head.swift; sourceTree = "<group>"; };
+		1C89EFB82469A20700C9BE93 /* ExerciseQualifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseQualifier.swift; sourceTree = "<group>"; };
 		7652E8DEC02657C85258082F /* Pods-RehabilitationAssistant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RehabilitationAssistant.debug.xcconfig"; path = "Target Support Files/Pods-RehabilitationAssistant/Pods-RehabilitationAssistant.debug.xcconfig"; sourceTree = "<group>"; };
-		8C2A97332465B800008DFCE8 /* RehabilitationAssistantDM.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RehabilitationAssistantDM.xcdatamodel; sourceTree = "<group>"; };
 		8C359FF624545CF5007DE5BC /* PoseNet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseNet.swift; sourceTree = "<group>"; };
 		8C359FF824545D2C007DE5BC /* PoseNetInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseNetInput.swift; sourceTree = "<group>"; };
 		8C359FFA24545D35007DE5BC /* PoseNetOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseNetOutput.swift; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 		8C427C8E244F27DD00A61D51 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		8C427C90244F2E2100A61D51 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
 		8C427C9F244F9E3700A61D51 /* TrainingMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingMenuView.swift; sourceTree = "<group>"; };
+		8CA2FD65246825EA00AA8F89 /* ExerciseEstimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseEstimator.swift; sourceTree = "<group>"; };
+		8CA2FD6724682D7E00AA8F89 /* HeadRelatedPose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadRelatedPose.swift; sourceTree = "<group>"; };
 		8C509289246C33A0001ED642 /* PoseNetMobileNet100S16FP16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PoseNetMobileNet100S16FP16.mlmodel; sourceTree = "<group>"; };
 		8CA2FD54246823CA00AA8F89 /* PoseCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PoseCD+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8CA2FD55246823CA00AA8F89 /* PoseCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PoseCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -173,8 +179,10 @@
 		8C35DFF02452396000C7F83C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8CA2FD65246825EA00AA8F89 /* ExerciseEstimator.swift */,
 				8C35DFF124523A3500C7F83C /* PoseSmoother.swift */,
 				8C35DFF52453341A00C7F83C /* VisionController.swift */,
+				1C89EFB82469A20700C9BE93 /* ExerciseQualifier.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -202,8 +210,8 @@
 				8C35A00E24549AC4007DE5BC /* PoseNet */,
 				8C427C90244F2E2100A61D51 /* Training.swift */,
 				8C35DFE224508A6300C7F83C /* Exercise.swift */,
-				8CA2FD65246825EA00AA8F89 /* Trainer.swift */,
-				8CA2FD6724682D7E00AA8F89 /* SimplePose.swift */,
+				8CA2FD6724682D7E00AA8F89 /* HeadRelatedPose.swift */,
+				1C89EFB62469884700C9BE93 /* Head.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -224,21 +232,6 @@
 				8CC8AA4F2462FF2700D07D25 /* ExerciseViewModel.swift */,
 			);
 			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		8CA2FD642468241900AA8F89 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				8CA2FD54246823CA00AA8F89 /* PoseCD+CoreDataClass.swift */,
-				8CA2FD55246823CA00AA8F89 /* PoseCD+CoreDataProperties.swift */,
-				8CA2FD56246823CA00AA8F89 /* PositionCD+CoreDataClass.swift */,
-				8CA2FD57246823CA00AA8F89 /* PositionCD+CoreDataProperties.swift */,
-				8CA2FD58246823CA00AA8F89 /* TrainingCD+CoreDataClass.swift */,
-				8CA2FD59246823CA00AA8F89 /* TrainingCD+CoreDataProperties.swift */,
-				8CA2FD5A246823CA00AA8F89 /* ExerciseCD+CoreDataClass.swift */,
-				8CA2FD5B246823CA00AA8F89 /* ExerciseCD+CoreDataProperties.swift */,
-			);
-			path = CoreData;
 			sourceTree = "<group>";
 		};
 		8CF8A80C244E3D3A004CB2C6 = {
@@ -262,7 +255,6 @@
 		8CF8A817244E3D3A004CB2C6 /* RehabilitationAssistant */ = {
 			isa = PBXGroup;
 			children = (
-				8CA2FD642468241900AA8F89 /* CoreData */,
 				8C35A007245464C7007DE5BC /* Pose */,
 				8C35A0022454649D007DE5BC /* Extensions+Types */,
 				8C35DFE624522F9C00C7F83C /* Utils */,
@@ -277,7 +269,6 @@
 				8CF8A823244E3D3F004CB2C6 /* LaunchScreen.storyboard */,
 				8CF8A826244E3D3F004CB2C6 /* Info.plist */,
 				8CF8A820244E3D3F004CB2C6 /* Preview Content */,
-				8C2A97322465B800008DFCE8 /* RehabilitationAssistantDM.xcdatamodeld */,
 			);
 			path = RehabilitationAssistant;
 			sourceTree = "<group>";
@@ -397,16 +388,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C427C8D244F27C800A61D51 /* TrainingsListView.swift in Sources */,
-				8CA2FD66246825EA00AA8F89 /* Trainer.swift in Sources */,
+				8CA2FD66246825EA00AA8F89 /* ExerciseEstimator.swift in Sources */,
 				8C35DFEE245234C300C7F83C /* CameraView.swift in Sources */,
-				8CA2FD61246823CA00AA8F89 /* TrainingCD+CoreDataProperties.swift in Sources */,
 				8C35A009245464FB007DE5BC /* PoseBuilder.swift in Sources */,
 				8C35DFF224523A3500C7F83C /* PoseSmoother.swift in Sources */,
 				8C427C91244F2E2100A61D51 /* Training.swift in Sources */,
 				8C35A00124546120007DE5BC /* Joint.swift in Sources */,
 				8CC8AA502462FF2700D07D25 /* ExerciseViewModel.swift in Sources */,
 				8C35DFE52451B10000C7F83C /* TrainingViewManager.swift in Sources */,
-				8CA2FD5C246823CA00AA8F89 /* PoseCD+CoreDataClass.swift in Sources */,
 				8C35A00B24546542007DE5BC /* PoseBuilderConfiguration.swift in Sources */,
 				8CF8A819244E3D3A004CB2C6 /* AppDelegate.swift in Sources */,
 				8CC8AA4E2462FEFF00D07D25 /* TrainingViewModel.swift in Sources */,
@@ -423,17 +412,14 @@
 				8C359FFF24546077007DE5BC /* Pose.swift in Sources */,
 				8CC8AA4A2462D7EB00D07D25 /* CountdownView.swift in Sources */,
 				8C35A0052454649E007DE5BC /* CGPoint+Extension.swift in Sources */,
-				8CA2FD5F246823CA00AA8F89 /* PositionCD+CoreDataProperties.swift in Sources */,
-				8CA2FD6824682D7E00AA8F89 /* SimplePose.swift in Sources */,
-				8C2A97342465B800008DFCE8 /* RehabilitationAssistantDM.xcdatamodeld in Sources */,
-				8CA2FD62246823CA00AA8F89 /* ExerciseCD+CoreDataClass.swift in Sources */,
-				8CA2FD60246823CA00AA8F89 /* TrainingCD+CoreDataClass.swift in Sources */,
+				8CA2FD6824682D7E00AA8F89 /* HeadRelatedPose.swift in Sources */,
+				1C89EFB72469884700C9BE93 /* Head.swift in Sources */,
+				1C89EFB92469A20700C9BE93 /* ExerciseQualifier.swift in Sources */,
 				8C35DFF62453341A00C7F83C /* VisionController.swift in Sources */,
 				8CA2FD5D246823CA00AA8F89 /* PoseCD+CoreDataProperties.swift in Sources */,
 				8CA2FD63246823CA00AA8F89 /* ExerciseCD+CoreDataProperties.swift in Sources */,
 				8C50928A246C33A0001ED642 /* PoseNetMobileNet100S16FP16.mlmodel in Sources */,
 				8CF8A81D244E3D3A004CB2C6 /* ContentView.swift in Sources */,
-				8CA2FD5E246823CA00AA8F89 /* PositionCD+CoreDataClass.swift in Sources */,
 				8C35DFE324508A6300C7F83C /* Exercise.swift in Sources */,
 				8C359FFD24545DCD007DE5BC /* PoseNetMobileNet075S16FP16.mlmodel in Sources */,
 				8C359FFB24545D35007DE5BC /* PoseNetOutput.swift in Sources */,
@@ -577,14 +563,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"RehabilitationAssistant/Preview Content\"";
-				DEVELOPMENT_TEAM = R5DNFEULA5;
+				DEVELOPMENT_TEAM = YP2KWKB9K2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = RehabilitationAssistant/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = AGH.RehabilitationAssistant;
+				PRODUCT_BUNDLE_IDENTIFIER = AGH.RehabilitationAssistantJZ;
 				PRODUCT_NAME = Physio;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -598,14 +584,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"RehabilitationAssistant/Preview Content\"";
-				DEVELOPMENT_TEAM = R5DNFEULA5;
+				DEVELOPMENT_TEAM = YP2KWKB9K2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = RehabilitationAssistant/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = AGH.RehabilitationAssistant;
+				PRODUCT_BUNDLE_IDENTIFIER = AGH.RehabilitationAssistantJZ;
 				PRODUCT_NAME = Physio;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -634,19 +620,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		8C2A97322465B800008DFCE8 /* RehabilitationAssistantDM.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				8C2A97332465B800008DFCE8 /* RehabilitationAssistantDM.xcdatamodel */,
-			);
-			currentVersion = 8C2A97332465B800008DFCE8 /* RehabilitationAssistantDM.xcdatamodel */;
-			path = RehabilitationAssistantDM.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 8CF8A80D244E3D3A004CB2C6 /* Project object */;
 }
