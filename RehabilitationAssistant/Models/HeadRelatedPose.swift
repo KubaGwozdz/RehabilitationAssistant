@@ -40,6 +40,33 @@ struct HeadRelatedPose {
         rightKnee = CGPoint(x: 0, y: 0)
         rightAnkle = CGPoint(x: 0, y: 0)
     }
+    
+    init(leftShoulder: CGPoint,
+         leftElbow: CGPoint,
+         leftWrist: CGPoint,
+         leftHip: CGPoint,
+         leftKnee: CGPoint,
+         leftAnkle: CGPoint,
+         rightShoulder: CGPoint,
+         rightElbow: CGPoint,
+         rightWrist: CGPoint,
+         rightHip: CGPoint,
+         rightKnee: CGPoint,
+         rightAnkle: CGPoint){
+        self.head = CGPoint(x: 0, y: 0)
+        self.leftShoulder = leftShoulder
+        self.leftElbow = leftElbow
+        self.leftWrist = leftWrist
+        self.leftHip = leftHip
+        self.leftKnee = leftKnee
+        self.leftAnkle = leftAnkle
+        self.rightShoulder = rightShoulder
+        self.rightElbow = rightElbow
+        self.rightWrist = rightWrist
+        self.rightHip = rightHip
+        self.rightKnee = rightKnee
+        self.rightAnkle = rightAnkle
+    }
 
     func getBodyJoints() -> [Joint.Name: CGPoint] {
         

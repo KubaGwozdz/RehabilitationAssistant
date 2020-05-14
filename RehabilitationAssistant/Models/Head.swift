@@ -15,8 +15,8 @@ struct Head {
     
     func getMeanHeadPosition(joints: [Joint]) -> CGPoint {
         
-        var meanXPosition = CGFloat()
-        var meanYPosition = CGFloat()
+        var meanXPosition = CGFloat(0)
+        var meanYPosition = CGFloat(0)
         
         for joint in joints {
                         
@@ -25,9 +25,13 @@ struct Head {
             
         }
         
-        let meanHeadPosition = CGPoint(x: meanXPosition/CGFloat(joints.count), y: meanYPosition/CGFloat(joints.count))
+        if joints.count == 0{
+            return CGPoint(x:0, y:0)
+        } else {
+            let meanHeadPosition = CGPoint(x: meanXPosition/CGFloat(joints.count), y: meanYPosition/CGFloat(joints.count))
+            return meanHeadPosition
+        }
         
-        return meanHeadPosition
     }
     
 }

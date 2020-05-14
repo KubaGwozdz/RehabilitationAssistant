@@ -39,9 +39,7 @@ class VisionController : UIViewController {
     private let smoother = PoseSmoother()
     
     private let exerciseEstimator = ExerciseEstimator()
-    
-    private let trainer = Trainer()
-            
+                
     /// The frame the PoseNet model is currently making pose predictions from.
     private var currentFrame: CGImage?
     
