@@ -35,7 +35,7 @@ struct TrainingViewManager: View {
 
 struct TrainingViewManager_Previews: PreviewProvider {
     static var previews: some View {
-        TrainingViewManager(training: TrainingViewModel(training: Training(name: "Knee Training", description: "Super hard", exercises: [Exercise(name: "Knee Hugs", description: "Hold your knee for one or two seconds and then switch sides", reps:10)])))
+        TrainingViewManager(training: TrainingViewModel(training: Training(name: "Knee Training", description: "Super hard", exercises: [Exercise(name: "Knee Hugs", description: "Hold your knee for one or two seconds and then switch sides", reps:10, poses: [])])))
     }
 }
 

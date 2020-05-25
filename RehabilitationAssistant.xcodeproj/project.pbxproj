@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C89EFB72469884700C9BE93 /* Head.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C89EFB62469884700C9BE93 /* Head.swift */; };
-		1C89EFB92469A20700C9BE93 /* ExerciseQualifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C89EFB82469A20700C9BE93 /* ExerciseQualifier.swift */; };
+		1C89EFB92469A20700C9BE93 /* RepsCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C89EFB82469A20700C9BE93 /* RepsCounter.swift */; };
 		6A4D0FECDB7C8E135C5FA76A /* Pods_RehabilitationAssistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1BE7A967A9C3717F65E3CEC /* Pods_RehabilitationAssistant.framework */; };
 		8C359FF724545CF5007DE5BC /* PoseNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C359FF624545CF5007DE5BC /* PoseNet.swift */; };
 		8C359FF924545D2C007DE5BC /* PoseNetInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C359FF824545D2C007DE5BC /* PoseNetInput.swift */; };
@@ -36,7 +36,8 @@
 		8C427CA0244F9E3700A61D51 /* TrainingMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C427C9F244F9E3700A61D51 /* TrainingMenuView.swift */; };
 		8C50928A246C33A0001ED642 /* PoseNetMobileNet100S16FP16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8C509289246C33A0001ED642 /* PoseNetMobileNet100S16FP16.mlmodel */; };
 		8C50928E246C5609001ED642 /* HeadRelatedPose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C50928D246C5609001ED642 /* HeadRelatedPose.swift */; };
-		8C509290246C5635001ED642 /* ExerciseEstimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C50928F246C5635001ED642 /* ExerciseEstimator.swift */; };
+		8C509290246C5635001ED642 /* HeadRelatedPoseBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C50928F246C5635001ED642 /* HeadRelatedPoseBuilder.swift */; };
+		8C86C0AF24798C6000C49EC6 /* PosesClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C86C0AE24798C6000C49EC6 /* PosesClassifier.swift */; };
 		8CC8AA4A2462D7EB00D07D25 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC8AA492462D7EB00D07D25 /* CountdownView.swift */; };
 		8CC8AA4C2462EE9600D07D25 /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC8AA4B2462EE9600D07D25 /* TrainingView.swift */; };
 		8CC8AA4E2462FEFF00D07D25 /* TrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC8AA4D2462FEFF00D07D25 /* TrainingViewModel.swift */; };
@@ -52,7 +53,7 @@
 /* Begin PBXFileReference section */
 		120039C90DB631C54B9A4654 /* Pods-RehabilitationAssistant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RehabilitationAssistant.release.xcconfig"; path = "Target Support Files/Pods-RehabilitationAssistant/Pods-RehabilitationAssistant.release.xcconfig"; sourceTree = "<group>"; };
 		1C89EFB62469884700C9BE93 /* Head.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Head.swift; sourceTree = "<group>"; };
-		1C89EFB82469A20700C9BE93 /* ExerciseQualifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseQualifier.swift; sourceTree = "<group>"; };
+		1C89EFB82469A20700C9BE93 /* RepsCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsCounter.swift; sourceTree = "<group>"; };
 		7652E8DEC02657C85258082F /* Pods-RehabilitationAssistant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RehabilitationAssistant.debug.xcconfig"; path = "Target Support Files/Pods-RehabilitationAssistant/Pods-RehabilitationAssistant.debug.xcconfig"; sourceTree = "<group>"; };
 		8C359FF624545CF5007DE5BC /* PoseNet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseNet.swift; sourceTree = "<group>"; };
 		8C359FF824545D2C007DE5BC /* PoseNetInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseNetInput.swift; sourceTree = "<group>"; };
@@ -80,7 +81,8 @@
 		8C427C9F244F9E3700A61D51 /* TrainingMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingMenuView.swift; sourceTree = "<group>"; };
 		8C509289246C33A0001ED642 /* PoseNetMobileNet100S16FP16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PoseNetMobileNet100S16FP16.mlmodel; sourceTree = "<group>"; };
 		8C50928D246C5609001ED642 /* HeadRelatedPose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadRelatedPose.swift; sourceTree = "<group>"; };
-		8C50928F246C5635001ED642 /* ExerciseEstimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseEstimator.swift; sourceTree = "<group>"; };
+		8C50928F246C5635001ED642 /* HeadRelatedPoseBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadRelatedPoseBuilder.swift; sourceTree = "<group>"; };
+		8C86C0AE24798C6000C49EC6 /* PosesClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosesClassifier.swift; sourceTree = "<group>"; };
 		8CC8AA492462D7EB00D07D25 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 		8CC8AA4B2462EE9600D07D25 /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
 		8CC8AA4D2462FEFF00D07D25 /* TrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewModel.swift; sourceTree = "<group>"; };
@@ -159,10 +161,11 @@
 		8C35DFF02452396000C7F83C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8C50928F246C5635001ED642 /* ExerciseEstimator.swift */,
+				8C50928F246C5635001ED642 /* HeadRelatedPoseBuilder.swift */,
 				8C35DFF124523A3500C7F83C /* PoseSmoother.swift */,
 				8C35DFF52453341A00C7F83C /* VisionController.swift */,
-				1C89EFB82469A20700C9BE93 /* ExerciseQualifier.swift */,
+				1C89EFB82469A20700C9BE93 /* RepsCounter.swift */,
+				8C86C0AE24798C6000C49EC6 /* PosesClassifier.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -386,13 +389,14 @@
 				8C35A00B24546542007DE5BC /* PoseBuilderConfiguration.swift in Sources */,
 				8CF8A819244E3D3A004CB2C6 /* AppDelegate.swift in Sources */,
 				8CC8AA4E2462FEFF00D07D25 /* TrainingViewModel.swift in Sources */,
+				8C86C0AF24798C6000C49EC6 /* PosesClassifier.swift in Sources */,
 				8C35DFEA24522F9C00C7F83C /* VideoCapture.swift in Sources */,
 				8C427C8F244F27DD00A61D51 /* HistoryView.swift in Sources */,
 				8C359FF924545D2C007DE5BC /* PoseNetInput.swift in Sources */,
 				8CC8AA4C2462EE9600D07D25 /* TrainingView.swift in Sources */,
 				8C359FF724545CF5007DE5BC /* PoseNet.swift in Sources */,
 				8C35DFE924522F9C00C7F83C /* AVCaptureVideoOrientation+Extension.swift in Sources */,
-				8C509290246C5635001ED642 /* ExerciseEstimator.swift in Sources */,
+				8C509290246C5635001ED642 /* HeadRelatedPoseBuilder.swift in Sources */,
 				8C35DFE1245089F900C7F83C /* ExercisesListView.swift in Sources */,
 				8C3BEAB024659EDA0070F417 /* TrainingFinished.swift in Sources */,
 				8CF8A81B244E3D3A004CB2C6 /* SceneDelegate.swift in Sources */,
@@ -401,7 +405,7 @@
 				8CC8AA4A2462D7EB00D07D25 /* CountdownView.swift in Sources */,
 				8C35A0052454649E007DE5BC /* CGPoint+Extension.swift in Sources */,
 				1C89EFB72469884700C9BE93 /* Head.swift in Sources */,
-				1C89EFB92469A20700C9BE93 /* ExerciseQualifier.swift in Sources */,
+				1C89EFB92469A20700C9BE93 /* RepsCounter.swift in Sources */,
 				8C50928E246C5609001ED642 /* HeadRelatedPose.swift in Sources */,
 				8C35DFF62453341A00C7F83C /* VisionController.swift in Sources */,
 				8C50928A246C33A0001ED642 /* PoseNetMobileNet100S16FP16.mlmodel in Sources */,

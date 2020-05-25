@@ -10,8 +10,7 @@ import Foundation
 import CoreGraphics
 
 
-class ExerciseEstimator {
-    var threshold: Double = 1.5
+class HeadRelatedPoseBuilder {
     
     func showPose(pose: Pose){
         print("POSE:")
@@ -26,7 +25,7 @@ class ExerciseEstimator {
         for (name, joint) in headRelatedPose.getBodyJoints(){
             print("\(name): \(joint)")
         }
-        var simplePose = HeadRelatedPose(
+        let simplePose = HeadRelatedPose(
             leftShoulder: CGPoint(x:0.6, y:0.9),
             leftElbow: CGPoint(x: 0.85, y: 1.9),
             leftWrist: CGPoint(x:1, y:2.9),
@@ -40,20 +39,10 @@ class ExerciseEstimator {
             rightKnee: CGPoint(x: -0.1, y: 4.3),
             rightAnkle: CGPoint(x:-0.1, y:5.7)
             )
-        let match = checkIfPosesMatch(pose: headRelatedPose, exercisePose: simplePose)
-        print("POSES MATCH: \(match)")
+//        let match = checkIfPosesMatch(pose: headRelatedPose, exercisePose: simplePose)
+//        print("POSES MATCH: \(match)")
     }
     
-    func checkIfPosesMatch(pose: HeadRelatedPose, exercisePose: HeadRelatedPose) -> Bool {
-        for (name, position) in pose.getBodyJoints(){
-            var distance = position.distance(to: exercisePose.getBodyJoints()[name]!)
-            print("DISTANCE of \(name): \(distance)")
-            if distance > threshold {
-                return false
-            }
-        }
-        return true
-    }
     
     func makeHeadRelatedPose(pose: Pose) -> HeadRelatedPose {
         
@@ -95,18 +84,6 @@ class ExerciseEstimator {
         
     }
     
-//    func scalePose(position: HeadRelatedPose, startingPoseArmScale: Double) -> Double {
-//
-//        let shoulderPoint = position.leftShoulder
-//        let elbowPoint = position.leftElbow
-//
-//        let distance = shoulderPoint.distance(to: elbowPoint)
-//
-//        let diff = distance - startingPoseArmScale
-//
-//        return diff
-//    }
-    
     
     func thighboneLength(pose: Pose) -> CGFloat {
         var isValid = false
@@ -141,16 +118,4 @@ class ExerciseEstimator {
         }
         return newPose
     }
-    
-    func checkPosition(threshold: Float = 15, position: HeadRelatedPose, exercise: Exercise) -> Float {
-        
-        let joints = position.getBodyJoints
-        
-        // getImportantJoints from exercise
-        // for each important get CGPoint from position
-        // get same joint from exercise !same position!
-        
-        return 3.0
-    }
-    
 }

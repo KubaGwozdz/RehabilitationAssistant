@@ -64,6 +64,10 @@ struct TrainingView: View {
                 HStack(){
                     Button(action:{
                         self.mode.wrappedValue.dismiss()
+                        
+                        // onDisappear is not always triggered
+                        self.cameraView!.controller.stop()
+                        self.timer.upstream.connect().cancel()
                     }){
                         Image(systemName: "xmark").foregroundColor(Color.gray)
                     }
@@ -72,7 +76,6 @@ struct TrainingView: View {
                     Spacer()
                     Button(action: {
                         self.cameraView!.controller.onCameraButtonTapped()
-                        
                     }) {
                         Image(systemName: "camera.rotate").foregroundColor(Color.gray)
                     }
@@ -93,10 +96,10 @@ struct TrainingView: View {
                 .onAppear(){
                     self.cameraView!.controller.viewDidLoad()
             }
-            .onDisappear(){
+        }.onDisappear(){
                 self.cameraView!.controller.stop()
                 self.timer.upstream.connect().cancel()
-            }
+            
         }.onReceive(timer){time in
             self.timeCounter += 1
             self.timeLabel = self.countToTimeString(counter: self.timeCounter)
@@ -108,7 +111,7 @@ struct TrainingView: View {
 // MARK: TrainingAssistant: View
 struct TrainingAssistant: View {
     var doneRepsChanged = NotificationCenter.default.publisher(for: .doneReps)
-
+    
     let metrics: GeometryProxy
     var time: String
     
@@ -203,9 +206,9 @@ struct TrainingAssistant: View {
 struct TrainingView_Previews: PreviewProvider {
     static var previews: some View {
         TrainingView(training: TrainingViewModel(training: Training(name: "Knee Training", description: "Super hard", exercises: [
-            Exercise(name: "Knee Hugs", description: "Hold your knee for one or two seconds and then switch sides", reps: 20),
-            Exercise(name: "Shoulder taps", description: "Stand in the high plank position and tap your shoulders", reps: 30)
-        ])), activeExercise: ExerciseViewModel(exercise: Exercise(name: "Knee Hugs", description: "Hold your knee for one or two seconds and then switch sides", reps: 20)), trainingFinished: .constant(false))
+            Exercise(name: "Knee Hugs", description: "Hold your knee for one or two seconds and then switch sides", reps: 20, poses: []),
+            Exercise(name: "Shoulder taps", description: "Stand in the high plank position and tap your shoulders", reps: 30, poses: [])
+        ])), activeExercise: ExerciseViewModel(exercise: Exercise(name: "Knee Hugs", description: "Hold your knee for one or two seconds and then switch sides", reps: 20, poses: [])), trainingFinished: .constant(false))
     }
 }
 

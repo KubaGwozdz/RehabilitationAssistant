@@ -12,7 +12,7 @@ import Combine
 
 class ExerciseViewModel: Identifiable, ObservableObject{
     var id = UUID()
-
+    
     let exercise: Exercise
     
     init(exercise: Exercise) {
@@ -32,4 +32,28 @@ class ExerciseViewModel: Identifiable, ObservableObject{
     var reps: Int{
         return self.exercise.reps
     }
+    
+    var startPose: HeadRelatedPose {
+        return self.exercise.poses[0]
+    }
+    
+    var actionPose: HeadRelatedPose {
+        return self.exercise.poses.last!
+    }
+    
+    var repsCountPoseNum: Int = 0
+    
+    var repsCountPose: HeadRelatedPose {
+        if repsCountPoseNum == -1 {
+            return self.exercise.poses.last!
+        } else {
+            return self.exercise.poses[self.repsCountPoseNum]
+        }
+    }
+    
+    func toggleRepsCountPose(){
+        self.repsCountPoseNum -= 1
+        self.repsCountPoseNum = self.repsCountPoseNum%2
+    }
+    
 }

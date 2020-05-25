@@ -18,16 +18,6 @@ extension Notification.Name {
 }
 
 class VisionController : UIViewController {
-    var doneReps: Int = 0{
-      didSet {
-        let userinfo: [String: Int] = ["doneReps": self.doneReps]
-        NotificationCenter.default.post(Notification(name: .doneReps,
-                                                     object: nil,
-                                                     userInfo: userinfo))
-      }
-    }
-    
-    weak var exercise: ExerciseViewModel?
     
     private var previewImageView: PoseImageView = PoseImageView()
     private var subviewAdded: Bool = false
@@ -38,13 +28,22 @@ class VisionController : UIViewController {
     
     private let smoother = PoseSmoother()
     
-    private let exerciseEstimator = ExerciseEstimator()
+    private let hrpBuilder = HeadRelatedPoseBuilder()
+        
+    private let repsCounter = RepsCounter()
+    
+    weak var exercise: ExerciseViewModel?{
+        didSet{
+            repsCounter.setExercise(exercise!)
+        }
+    }
                 
     /// The frame the PoseNet model is currently making pose predictions from.
     private var currentFrame: CGImage?
     
     /// The set of parameters passed to the pose builder when detecting poses.
     private var poseBuilderConfiguration = PoseBuilderConfiguration()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -124,10 +123,12 @@ extension VisionController: PoseNetDelegate {
         let builderPoses = [poseBuilder.pose]
         let pose = smoother.getCurrentPose(pose: builderPoses[0])
         
-        exerciseEstimator.showPose(pose: pose)
+//        hrpBuilder.showPose(pose: pose)
         
-        let headRelatedPose = exerciseEstimator.makeHeadRelatedPose(pose: pose)
-        exerciseEstimator.showHeadRelatedPose(headRelatedPose: headRelatedPose)
+        let headRelatedPose = hrpBuilder.makeHeadRelatedPose(pose: pose)
+        hrpBuilder.showHeadRelatedPose(headRelatedPose: headRelatedPose)
+        repsCounter.count(headRelatedPose)
+        
         
         previewImageView.show(poses: [pose], on: currentFrame)
         if !self.subviewAdded{

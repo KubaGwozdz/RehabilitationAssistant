@@ -25,7 +25,6 @@ struct CameraView : UIViewControllerRepresentable {
     
     func changeExercise(_ exercise: ExerciseViewModel){
         controller.exercise = exercise
-        controller.doneReps = 0
     }
 }
 

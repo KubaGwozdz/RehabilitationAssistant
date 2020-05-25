@@ -8,7 +8,7 @@
 import SwiftUI
 import Foundation
 
-struct Training: Codable {
+struct Training {
     var name: String
     var description: String
     var imageName: String { return name }

@@ -57,7 +57,7 @@ struct TrainingFinished: View {
 
 struct TrainingFinished_Previews: PreviewProvider {
     static var previews: some View {
-        TrainingFinished(training: TrainingViewModel(training: Training(name: "Knee Training", description: "Training focused on your knees", exercises: [Exercise(name: "Knee Hugs", description: "Hold your knee for one or two seconds and then switch sides", reps:10)]))
+        TrainingFinished(training: TrainingViewModel(training: Training(name: "Knee Training", description: "Training focused on your knees", exercises: [Exercise(name: "Knee Hugs", description: "Hold your knee for one or two seconds and then switch sides", reps:10, poses: [])]))
         )
     }
 }

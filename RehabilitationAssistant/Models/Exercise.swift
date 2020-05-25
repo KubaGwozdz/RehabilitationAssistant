@@ -8,11 +8,16 @@
 
 import SwiftUI
 
-struct Exercise: Codable {
+struct Exercise {
     var name: String
     var description: String
     var imageName: String { return name }
-    var reps: Int    
+    var reps: Int
+    
+    var poses: [HeadRelatedPose]
+    
+    
+    
 }
 
 
