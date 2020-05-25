@@ -17,14 +17,16 @@ struct TrainingViewManager: View {
     @State var isCountdownFinished = false
     @State var trainingFinished = false
     
+    @State private var timeLabel:String = "00:00"
+    
     
     var body: some View {
         ZStack{
             if isCountdownFinished{
                 if trainingFinished{
-                    TrainingFinished(training: self.training)
+                    TrainingFinished(training: self.training, timeLabel: self.$timeLabel)
                 } else {
-                    TrainingView(training: training, activeExercise: training.exercises[0], trainingFinished: self.$trainingFinished)
+                    TrainingView(training: training, activeExercise: training.exercises[0], trainingFinished: self.$trainingFinished, timeLabel: self.$timeLabel)
                 }
             } else {
                 CountdownView(isCountDownFinished: $isCountdownFinished)

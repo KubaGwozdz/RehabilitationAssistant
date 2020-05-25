@@ -11,7 +11,7 @@ import SwiftUI
 struct TrainingView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
-    @State private var timeLabel:String = "00:00"
+    @Binding var timeLabel: String
     @State private var timeCounter:Int = 0
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
@@ -24,14 +24,15 @@ struct TrainingView: View {
     
     @Binding var trainingFinished: Bool
     
-    init(training: TrainingViewModel, activeExercise: ExerciseViewModel, trainingFinished: Binding<Bool>, extra: Bool){
+    init(training: TrainingViewModel, activeExercise: ExerciseViewModel, trainingFinished: Binding<Bool>, timeLabel: Binding<String>, extra: Bool){
         self.training = training
         self._activeExercise = State(initialValue: activeExercise)
         self._trainingFinished = trainingFinished
+        self._timeLabel = timeLabel
     }
     
-    init(training: TrainingViewModel, activeExercise: ExerciseViewModel, trainingFinished: Binding<Bool>){
-        self.init(training: training, activeExercise: activeExercise, trainingFinished: trainingFinished, extra: false)
+    init(training: TrainingViewModel, activeExercise: ExerciseViewModel, trainingFinished: Binding<Bool>, timeLabel: Binding<String>){
+        self.init(training: training, activeExercise: activeExercise, trainingFinished: trainingFinished, timeLabel: timeLabel, extra: false)
         self.cameraView = CameraView(exercise: self.$activeExercise)
     }
     
@@ -208,7 +209,7 @@ struct TrainingView_Previews: PreviewProvider {
         TrainingView(training: TrainingViewModel(training: Training(name: "Knee Training", description: "Super hard", exercises: [
             Exercise(name: "Knee Hugs", description: "Hold your knee for one or two seconds and then switch sides", reps: 20, poses: []),
             Exercise(name: "Shoulder taps", description: "Stand in the high plank position and tap your shoulders", reps: 30, poses: [])
-        ])), activeExercise: ExerciseViewModel(exercise: Exercise(name: "Knee Hugs", description: "Hold your knee for one or two seconds and then switch sides", reps: 20, poses: [])), trainingFinished: .constant(false))
+        ])), activeExercise: ExerciseViewModel(exercise: Exercise(name: "Knee Hugs", description: "Hold your knee for one or two seconds and then switch sides", reps: 20, poses: [])), trainingFinished: .constant(false), timeLabel: .constant("00:00"))
     }
 }
 

@@ -12,6 +12,8 @@ struct TrainingFinished: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     let training: TrainingViewModel
     
+    @Binding var timeLabel: String
+    
     var body: some View {
         GeometryReader{ metrics in
             VStack {
@@ -44,6 +46,14 @@ struct TrainingFinished: View {
                             .padding(50)
                     }
                 }
+                HStack {
+                    Text("TIME:")
+                        .font(.custom("", size: 20))
+                        .foregroundColor(Color.gray)
+                    Text(self.timeLabel)
+                    .font(.custom("", size: 30))
+
+                }
                 Spacer()
                 HStack{
                     Spacer()
@@ -57,7 +67,7 @@ struct TrainingFinished: View {
 
 struct TrainingFinished_Previews: PreviewProvider {
     static var previews: some View {
-        TrainingFinished(training: TrainingViewModel(training: Training(name: "Knee Training", description: "Training focused on your knees", exercises: [Exercise(name: "Knee Hugs", description: "Hold your knee for one or two seconds and then switch sides", reps:10, poses: [])]))
+        TrainingFinished(training: TrainingViewModel(training: Training(name: "Knee Training", description: "Training focused on your knees", exercises: [Exercise(name: "Knee Hugs", description: "Hold your knee for one or two seconds and then switch sides", reps:10, poses: [])])), timeLabel: .constant("12:34")
         )
     }
 }
